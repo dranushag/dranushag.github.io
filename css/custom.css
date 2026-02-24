@@ -386,3 +386,18 @@ footer a:hover {
     padding: 18px 20px;
   }
 }
+
+/* ===============================
+   ACADEMIC RANK BOX
+=================================*/
+
+.rank-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  line-height: 1.8;
+  color: #1c488b;
+}
