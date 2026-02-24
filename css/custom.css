@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5 {
 .hero-section {
   background: linear-gradient(135deg, #0F3D3E, #155E63);
   color: #ffffff;
-  min-height: 40vh;
+  min-height: 30vh;
   display: flex;
   align-items: center;
   text-align: center;
