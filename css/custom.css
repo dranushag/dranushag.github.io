@@ -351,3 +351,33 @@ margin-bottom:10px;
 transform:translateY(-5px);
 box-shadow:0 8px 25px rgba(0,0,0,0.12);
 }
+
+.award-highlight{
+background:#f9f9f9;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.06);
+}
+
+.award-highlight h4{
+color:#CBA135;
+margin-bottom:5px;
+}
+
+.award-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.award-item{
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 3px 10px rgba(0,0,0,0.06);
+}
+
+.award-item span{
+font-weight:600;
+color:#777;
+}

@@ -198,71 +198,100 @@
 
 <!-- AWARDS -->
 <section class="container section-spacing">
-    <h3 class="text-center mb-4">Professional Awards & Recognition</h3>
+    <h3 class="text-center mb-5">Professional Awards & Recognition</h3>
 
-    <div class="text-center mb-4">
-        <span class="badge bg-warning text-dark m-1">10+ Awards</span>
-        <span class="badge bg-light text-dark border m-1">Pfizer</span>
-        <span class="badge bg-light text-dark border m-1">Abbott</span>
-        <span class="badge bg-light text-dark border m-1">Academic Achievements</span>
+    <!-- FEATURED AWARDS -->
+    <div class="row text-center mb-4">
+
+        <div class="col-md-3 col-6 mb-3">
+            <div class="award-highlight">
+                <h4>2024</h4>
+                <p>Global Excellence Award<br>Pfizer</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6 mb-3">
+            <div class="award-highlight">
+                <h4>2025</h4>
+                <p>Field Medical Excellence<br>Pfizer</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6 mb-3">
+            <div class="award-highlight">
+                <h4>2021</h4>
+                <p>Field Medical Excellence<br>Abbott</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-6 mb-3">
+            <div class="award-highlight">
+                <h4>2014</h4>
+                <p>IGNITE Dental Quiz<br>Rank 1</p>
+            </div>
+        </div>
+
     </div>
 
-    <div class="accordion" id="awardsAccordion">
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pfizerAwards">
-                    Pfizer Awards (2022–2025)
-                </button>
-            </h2>
+    <!-- BUTTON -->
+    <div class="text-center mb-4">
+        <button class="btn btn-outline-dark" onclick="toggleAwards()">
+            View Full Award History
+        </button>
+    </div>
 
-            <div id="pfizerAwards" class="accordion-collapse collapse" data-bs-parent="#awardsAccordion">
-                <div class="accordion-body">
-                    <ul>
-                        <li><strong>Sep 2025 – Excellence Award</strong> – Training the team, knowledge delivery & presentation excellence.</li>
-                        <li><strong>Jul 2025 – Field Medical Excellence Award</strong> – Scientific collaboration with Government stakeholders for Pneumococcal Immunization.</li>
-                        <li><strong>Apr 2025 – Excellence Award (One-Med Champion)</strong> – Cross-functional collaboration.</li>
-                        <li><strong>Dec 2024 – Global Excellence Award (One-Med Champion)</strong></li>
-                        <li><strong>Nov 2024 – Field Medical Excellence Award</strong></li>
-                        <li><strong>Jul 2024 – Excellence Award (FME Council)</strong></li>
-                        <li><strong>Apr 2023 – Excellence Award</strong> – Scientific engagement with SMEs, health authorities & govt affairs.</li>
-                        <li><strong>Dec 2022 – Excellence Award</strong> – SHIELD scientific engagement meetings.</li>
-                    </ul>
 
-                </div>
+    <!-- EXPANDABLE AWARD LIST -->
+    <div id="allAwards" style="display:none">
+
+        <div class="award-grid">
+
+            <div class="award-item">
+                <span>Sep 2025</span>
+                <p>Excellence Award – Pfizer<br>Training the team & knowledge excellence.</p>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#abbottAwards">
-                    Abbott Awards
-                </button>
-            </h2>
-
-            <div id="abbottAwards" class="accordion-collapse collapse" data-bs-parent="#awardsAccordion">
-                <div class="accordion-body">
-                    <ul>
-                        <li><strong>Field Medical Excellence Award</strong> – Won twice consecutively (2020 & 2021).</li>
-                    </ul>
-                </div>
+            <div class="award-item">
+                <span>Jul 2025</span>
+                <p>Field Medical Excellence – Pfizer<br>Pneumococcal Immunization project.</p>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#academicAwards">
-                    Academic Achievement
-                </button>
-            </h2>
-
-            <div id="academicAwards" class="accordion-collapse collapse" data-bs-parent="#awardsAccordion">
-                <div class="accordion-body">
-                    <ul>
-                        <li><strong>IGNITE Inter-College Dental Quiz – South Zone (2014)</strong> – Rank 1, Manipal University.</li>
-                    </ul>
-                </div>
+            <div class="award-item">
+                <span>Apr 2025</span>
+                <p>Excellence Award – One-Med Champion – Pfizer</p>
             </div>
+
+            <div class="award-item">
+                <span>Dec 2024</span>
+                <p>Global Excellence Award – One-Med Champion – Pfizer</p>
+            </div>
+
+            <div class="award-item">
+                <span>Nov 2024</span>
+                <p>Field Medical Excellence – Pfizer</p>
+            </div>
+
+            <div class="award-item">
+                <span>Jul 2024</span>
+                <p>Excellence Award – FME Council – Pfizer</p>
+            </div>
+
+            <div class="award-item">
+                <span>Apr 2023</span>
+                <p>Excellence Award – Pfizer<br>Scientific engagement with authorities.</p>
+            </div>
+
+            <div class="award-item">
+                <span>Dec 2022</span>
+                <p>Excellence Award – Pfizer<br>SHIELD scientific meetings.</p>
+            </div>
+
+            <div class="award-item">
+                <span>2020–2021</span>
+                <p>Field Medical Excellence – Abbott<br>Won consecutively.</p>
+            </div>
+
         </div>
     </div>
 </section>
@@ -329,6 +358,18 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function toggleAwards() {
+    var x = document.getElementById("allAwards");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+    }
+</script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNZ97SPEB2"></script>
